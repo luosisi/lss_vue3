@@ -1,0 +1,28 @@
+$imgRoot: '~@/assets/img/';
+$color: red;
+
+@function rem($val) {
+	@return $val/100 * 1rem;
+}
+
+@function bgUrlConcat($url) {
+	@return unquote('url(' + $imgRoot + $url + ')');
+}
+
+@mixin bgImage($url, $size: cover) {
+	background: url($imgRoot + $url);
+	background-size: $size;
+}
+
+@mixin widHeit($width, $height, $display: inline-block) {
+	display: $display;
+	width: $width;
+	height: $height;
+}
+
+@mixin ellipsis($line: 1) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+}
