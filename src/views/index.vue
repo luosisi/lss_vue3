@@ -21,7 +21,7 @@ export default defineComponent({
 
 		const getUserInfo = () => {
 			axios
-				.post('/users/XPoet', {
+				.get('/users/XPoet', {
 					params: {
 						isloading: true
 					}
@@ -59,7 +59,7 @@ export default defineComponent({
 	},
 	mounted() {
 		// this.getInfo()
-		const te = {}
+		const te = new Object()
 		if (te == null) {
 			console.log('-----')
 		}
